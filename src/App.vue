@@ -36,5 +36,6 @@ export default {
 }
 
 @import "./assets/scss/style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 </style>
