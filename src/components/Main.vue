@@ -3,12 +3,41 @@
       <div class="main-container">
             <div class="images-container">
                 <div class="images">
-                    <img src="../assets/img/h-2-port-img-1.jpg" alt="">
-                    <img src="../assets/img/h-2-port-img-2.jpg" alt="">
-                    <img src="../assets/img/h-2-port-img-3.jpg" alt="">
-                    <img src="../assets/img/h-2-port-img-4.jpg" alt="">
-                    <img src="../assets/img/h-2-port-img-5.jpg" alt="">
-                    <img src="../assets/img/h-2-port-img-6.jpg" alt="">
+
+                    <div class="image-container">
+                        <img src="../assets/img/h-2-port-img-1.jpg" alt="">
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/img/h-2-port-img-2.jpg" alt="">
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/img/h-2-port-img-3.jpg" alt="">
+                        <img src="../assets/svg/svg-4.svg" class="circle-white" alt="">
+                        <img src="../assets/svg/svg-6.svg" class="cart-red" alt="">
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/img/h-2-port-img-4.jpg" alt="">
+                        <div class="hover-content">
+                            <div class="text-container">
+                                <div class="title">
+                                Illustration of novels
+                            </div>
+
+                            <div class="subtitle">
+                                Illustration
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/img/h-2-port-img-5.jpg" alt="">
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/img/h-2-port-img-6.jpg" alt="">
+                        <a href="#"><img src="../assets/svg/svg-2.svg" class="arrow-up" alt=""></a>
+                        <a href="#"><img src="../assets/svg/svg-2.svg" class="arrow-up-2" alt=""></a>
+                    </div>
+                   
                 </div>
             </div>
 
@@ -68,9 +97,14 @@
                                 </div>
                             </div>
                         </div>
+
+                        
+
                         
                     </div>
                 </div>
+
+                <a href=""><img src="../assets/svg/svg-2.svg" class="arrow-up-3" alt=""></a>
             </div> 
 
             <div class="contact-us-container">
@@ -98,17 +132,52 @@
                         <img src="../assets/img/h-2-blog-img-1.jpg" alt="">
                         <h3>This way, loves: a detailed guide through new design </h3>
                         <h5>By Emily Fields</h5>
+
+                        <div class="date-container">
+                            <div class="day">
+                                07
+                            </div>
+
+                            <div class="month">
+                                May '19
+                            </div>
+                        </div>
                     </div>
                     <div class="image-container">
                         <img src="../assets/img/h-2-blog-img-2.jpg" alt="">
                         <h3>I try to give people a different way of looking art </h3>
                         <h5>By Emily Fields</h5>
+
+                        <div class="date-container">
+                            <div class="day">
+                                07
+                            </div>
+
+                            <div class="month">
+                                May '19
+                            </div>
+                        </div>
+
                     </div>
                     <div class="image-container">
                         <img src="../assets/img/h-2-blog-img-3.jpg" alt="">
                         <h3>Introduce Richard Laperrière of those amazing features </h3>
                         <h5>By Emily Fields</h5>
+
+                        <div class="date-container">
+                            <div class="day">
+                                07
+                            </div>
+
+                            <div class="month">
+                                May '19
+                            </div>
+                        </div>
+
                     </div>
+
+                    <a href=""><img src="../assets/svg/svg-2.svg" class="arrow-up-4" alt=""></a>
+
                 </div>
                 
             </div> 
@@ -161,11 +230,81 @@ export default {
         .images-container {
             width:100%;
             .images{
-                
                 display: flex;
                 flex-wrap: wrap;
-                img {
+                .image-container {
                     width: calc(100% / 3);
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .hover-content {
+                        position: absolute;
+                        top: 40%;
+                        left: 0;
+                        background-color: white;
+                        display: none;
+
+                        .text-container {
+                            padding: 1.5em;
+                            .title {
+                                font-size: 1.4em;
+                            }
+
+                            .subtitle {
+                                font-style: oblique;
+                                margin-top: 1em;
+                            }
+                        }
+                    }
+
+                    a {
+                        .arrow-up {
+                            width: 7%;
+                            padding: 0.4em;
+                            background-color: #c0e1cf;
+                            position: absolute;
+                            right: 3%;
+                            bottom: 5%;
+                        }
+
+                        .arrow-up-2 {
+                            width: 7%;
+                            padding: 0.4em;
+                            background-color: #c0e1cf;
+                            position: absolute;
+                            right: 3%;
+                            top: 2%;
+                        }
+                    }
+
+                    .circle-white {
+                        background-color: #ef2853;
+                        position: absolute;
+                        padding: 0.4em;
+                        width: 7%;
+                        right: 0;
+                        top: 15%;
+                    }
+
+                    .cart-red {
+                        background-color: white;
+                        position: absolute;
+                        padding: 0.4em;
+                        width: 7%;
+                        right: 0;
+                        top: 23%;
+                    }
+
+                    
+
+                }
+
+                .image-container:hover .hover-content {
+                    display: block;
+
                 }
             }
         }
@@ -173,6 +312,21 @@ export default {
         .working-process-container {
             width: 100%;
             height: 400px;
+            position: relative;
+
+            a {
+                        
+                .arrow-up-3 {
+                    width: 2.5%;
+                    padding: 0.4em;
+                    background-color: #c0e1cf;
+                    position: absolute;
+                    right: 2%;
+                    bottom: 5%;
+                }
+                        
+            }
+
 
             .working-process-contained {
                 width: 60%;
@@ -198,6 +352,8 @@ export default {
                     background-repeat: no-repeat;
                     margin-top: 3em;
                     display: flex;
+
+                   
 
                     .process-thumb {
                         height: 74%;
@@ -237,6 +393,7 @@ export default {
         .contact-us-container {
             width: 100%;
             height: 700px;
+            position: relative;
 
             .contact-us-container-top {
                 width: 100%;
@@ -293,7 +450,7 @@ export default {
                     }
 
                      #bush {
-                         transform: scaleX(-1);
+                        transform: scaleX(-1);
                         position: absolute;
                         bottom: 0;
                         left: 0;
@@ -369,6 +526,19 @@ export default {
                         font-style: oblique;
                     }
                 }
+
+                a {
+                        
+                    .arrow-up-4 {
+                        width: 2.5%;
+                        padding: 0.4em;
+                        background-color: #c0e1cf;
+                        position: absolute;
+                        right: 2%;
+                        bottom: -2%;
+                    }  
+                }
+
             }
 
         }

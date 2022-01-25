@@ -174,7 +174,7 @@ export default {
     .header-bottom {
       width: 100%;
       margin: 0 auto;
-      height: calc(100% - 50px);
+      height: calc(100% - 80px);
 
       .slider-container {
         width: 100%;
