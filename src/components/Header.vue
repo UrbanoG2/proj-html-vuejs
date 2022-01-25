@@ -16,7 +16,7 @@
 
       <div class="header-bottom">
         <div class="slider-container active">
-            <font-awesome-icon @click ="prev" id="angle-left" icon="angle-left" />
+            <font-awesome-icon @click ="getActive" id="angle-left" icon="angle-left" />
             <div class="slider-contained">
 
 
@@ -40,13 +40,13 @@
 
               </div>
             </div>
-            <font-awesome-icon @click ="next" id="angle-right" icon="angle-right" />
+            <font-awesome-icon @click ="getActive" id="angle-right" icon="angle-right" />
 
 
         </div>
 
         <div class="slider-container display-none">
-            <font-awesome-icon @click ="prev" id="angle-left" icon="angle-left" />
+            <font-awesome-icon @click ="getActive" id="angle-left" icon="angle-left" />
             <div class="slider-contained">
 
 
@@ -66,7 +66,7 @@
 
               </div>
             </div>
-            <font-awesome-icon @click ="next" id="angle-right" icon="angle-right" />
+            <font-awesome-icon @click ="getActive" id="angle-right" icon="angle-right" />
 
 
         </div>
@@ -103,37 +103,27 @@ export default {
 
 
     methods: {
-      // prev: function () {
-      //       this.counter -= 1;
 
-      //       if (this.counter < 0) {
-      //           this.counter = this.sliderImages.length - 1;
-      //       }
-      //   },
+      getActive() {
+        let element = document.querySelectorAll(".slider-container");
+        console.log(element);
 
-      //  next: function () {
-      //      this.counter += 1;
+        for (let i = 0; i < element.length; i++) {
+          const singleElement = element[i];
+          console.log(singleElement);
 
-      //      if (this.counter > this.sliderImages.length - 1) {
-      //          this.counter = 0;
-      //      }
-      //  },
+          if (singleElement.classList.contains("active")) {
+          singleElement.classList.remove("active");
+          singleElement.classList.add("display-none")
+        } else if (singleElement.classList.contains("display-none")) {
+          singleElement.classList.remove("display-none");
+          singleElement.classList.add("active")
+        }
 
-      //   changeOnClick: function (index) {
-      //       console.log(index);
-      //       this.counter = index;
-      //   }
+        }
+      }
     },
 
-    // created() {
-    //   this.images = [
-    //     "h-2-slider-img-11.png",
-    //     "h-2-slider-img-15.png",
-    //     "h-2-slider-img-16.png"
-    //   ],
-
-    //   this.counter = 0;
-    // }
 }
 </script>
 
