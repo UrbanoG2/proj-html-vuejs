@@ -78,6 +78,16 @@
                     <div class="contact-us-contained-top">
                         <h1>Want to work with us? Send us <span>a message!</span></h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fugit blanditiis nesciunt! At expedita illum Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus veritatis hic, cum voluptates nobis perspiciatis, aliquam nihil totam cumque fugiat, aspernatur doloribus ratione omnis quae modi sunt reprehenderit? Adipisci!</p>
+                        <img src="../assets/svg/svg-0.svg" id="petal" alt="">
+                        <img src="../assets/svg/svg-0.svg" id="petal-2" alt="">
+                        <img src="../assets/img/short-slider-rev-1-img-5.png" id="cloud" alt="">
+                        <img src="../assets/img/short-slider-rev-1-img-9.png" id="big-leaf" alt="">
+                        <img src="../assets/img/short-slider-rev-1-img-10.png" id="small-leaf" alt="">
+                        <img src="../assets/img/short-slider-rev-1-img-1.png" id="bush" alt="">
+
+
+
+
 
                         <button><a href="#">contact</a></button>
                     </div>
@@ -110,14 +120,12 @@
 <script>
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
 import { faCloud } from '@fortawesome/free-solid-svg-icons'
 import { faPencilRuler } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-// library.add(faUserSecret)
 library.add(faComment)
 library.add(faCloud)
 library.add(faPencilRuler)
@@ -233,7 +241,9 @@ export default {
             .contact-us-container-top {
                 width: 100%;
                 height: 50%;
-                background-color: #f3d0c7;
+                background-color: #f7eeeb;
+                position: relative;
+
 
 
                 .contact-us-contained-top {
@@ -244,6 +254,50 @@ export default {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+
+                    #petal {
+                        transform: scaleX(-1);
+                        position: absolute;
+                        top: 5%;
+                        right: 10%;
+                        width: 40px;
+                    }
+
+                    #petal-2 {
+                        position: absolute;
+                        bottom: 5%;
+                        left: 15%;
+                        width: 40px;
+                        fill: pink;
+                    }
+
+                    #cloud {
+                        transform: scaleY(-1);
+                        position: absolute;
+                        width: 200px;
+                        top: 0%;
+                        left: 5%;
+                    }
+
+                    #big-leaf {
+                        position: absolute;
+                        bottom: 0%;
+                        right: 15%;
+                    }
+
+                    #small-leaf {
+                        transform: scaleX(-1);
+                        position: absolute;
+                        bottom: 25%;
+                        right: 0;
+                    }
+
+                     #bush {
+                         transform: scaleX(-1);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
 
                     h1 {
                         font-weight: normal;
@@ -261,6 +315,7 @@ export default {
                         color: #a6a6a6;
                         text-align: center;
                         margin-bottom: 0.5em;
+                        font-size: 0.9em;
                     }
 
                     button {
