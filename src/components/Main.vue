@@ -525,7 +525,6 @@ export default {
                     }
                 }
             }
-
             .contact-us-bottom {
                 height: 50%;
                 width: 60%;
@@ -602,7 +601,6 @@ export default {
                 }
 
             }
-
         }
     }
 </style>
