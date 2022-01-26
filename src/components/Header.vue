@@ -69,8 +69,12 @@
               </div>
             </div>
             <font-awesome-icon @click ="getActive" id="angle-right" icon="angle-right" />
+        </div>
 
-
+        <div class="dots">
+          <font-awesome-icon @click ="getActive" id="circle" icon="circle" />
+          <font-awesome-icon @click ="getActive" id="circle" icon="circle" />
+          <font-awesome-icon @click ="getActive" id="circle" icon="circle" />
         </div>
       </div>
       
@@ -83,11 +87,14 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
 library.add(faAngleLeft)
 library.add(faAngleRight)
+library.add(faCircle)
+
 
 
 
@@ -112,12 +119,12 @@ export default {
 
            {
             name:"Portfolio",
-            link:"#",
+            link:"#main-container",
           },
 
            {
             name:"Blog",
-            link:"#",
+            link:"#blog",
           },
 
            {
@@ -128,12 +135,6 @@ export default {
            {
             name:"Elements",
             link:"#",
-          },
-
-           {
-            name:"",
-            link:"#",
-            class:"menu-icon"
           },
         ]
       }
@@ -199,7 +200,8 @@ export default {
           a:hover,
           a:active,
           .active {
-            border-bottom: 3px solid #f5d8ca;
+            background: rgb(225,192,176);
+            background: linear-gradient(0deg, rgba(225,192,176,1) 0%, rgba(255,255,255,1) 100%);
           }
 
           .menu-icon {
@@ -367,6 +369,18 @@ export default {
 
       .active {
         display: block;
+      }
+
+      .dots {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        #circle {
+            color: #e1c0b0;
+            font-size: 1em;
+            padding: 0.3em 0;
+        }
       }
     }
   }
