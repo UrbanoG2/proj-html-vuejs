@@ -1,7 +1,7 @@
 <template>
   <div>
-      <div class="main-container">
-            <div class="images-container">
+      <div class="main-container" id="main-container">
+            <div class="images-container" >
                 <div class="images">
 
                     <div class="image-container">
@@ -34,8 +34,8 @@
                     </div>
                     <div class="image-container">
                         <img src="../assets/img/h-2-port-img-6.jpg" alt="">
-                        <a href="#"><img src="../assets/svg/svg-2.svg" class="arrow-up" alt=""></a>
-                        <a href="#"><img src="../assets/svg/svg-2.svg" class="arrow-up-2" alt=""></a>
+                        <a href="#home"><img src="../assets/svg/svg-2.svg" class="arrow-up" alt=""></a>
+                        <a href="#home"><img src="../assets/svg/svg-2.svg" class="arrow-up-2" alt=""></a>
                     </div>
                    
                 </div>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
 
-                <a href=""><img src="../assets/svg/svg-2.svg" class="arrow-up-3" alt=""></a>
+                <a href="#home"><img src="../assets/svg/svg-2.svg" class="arrow-up-3" alt=""></a>
             </div> 
 
             <div class="contact-us-container">
@@ -119,15 +119,11 @@
                         <img src="../assets/img/short-slider-rev-1-img-10.png" id="small-leaf" alt="">
                         <img src="../assets/img/short-slider-rev-1-img-1.png" id="bush" alt="">
 
-
-
-
-
                         <button><a href="#">contact</a></button>
                     </div>
                 </div>
 
-                <div class="contact-us-bottom">
+                <div class="contact-us-bottom" id="blog" >
                     <div class="image-container">
                         <img src="../assets/img/h-2-blog-img-1.jpg" alt="">
                         <h3>This way, loves: a detailed guide through new design </h3>
@@ -141,6 +137,8 @@
                             <div class="month">
                                 May '19
                             </div>
+
+                            <div class="triangle"></div>
                         </div>
                     </div>
                     <div class="image-container">
@@ -156,6 +154,9 @@
                             <div class="month">
                                 May '19
                             </div>
+
+                            <div class="triangle"></div>
+
                         </div>
 
                     </div>
@@ -172,11 +173,14 @@
                             <div class="month">
                                 May '19
                             </div>
+
+                            <div class="triangle"></div>
+
                         </div>
 
                     </div>
 
-                    <a href=""><img src="../assets/svg/svg-2.svg" class="arrow-up-4" alt=""></a>
+                    <a href="#home"><img src="../assets/svg/svg-2.svg" class="arrow-up-4" alt=""></a>
 
                 </div>
                 
@@ -209,18 +213,35 @@ export default {
     components:{
         FontAwesomeIcon 
     },
-    // data() {
-    //    return {
-    //         mainImages:[
-    //         "h-2-port-img-1.jpg",
-    //         "h-2-port-img-2.jpg",
-    //         "h-2-port-img-3.jpg",
-    //         "h-2-port-img-4.jpg",
-    //         "h-2-port-img-5.jpg",
-    //         "h-2-port-img-6.jpg",
-    //     ]
-    //    }
-    // }
+    data() {
+       return {
+            mainImages:[ 
+                {
+                    image: "h-2-port-img-1.jpg"
+                },
+
+                {
+                    image: "h-2-port-img-2.jpg"
+                },
+
+                {
+                    image: "h-2-port-img-3.jpg"
+                },
+
+                {
+                    image: "h-2-port-img-4.jpg"
+                },
+
+                {
+                    image: "h-2-port-img-5.jpg"
+                },
+
+                {
+                    image: "h-2-port-img-6.jpg"
+                },
+        ]
+       }
+    }
 }
 </script>
 
@@ -245,7 +266,9 @@ export default {
                         top: 40%;
                         left: 0;
                         background-color: white;
-                        display: none;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.3s ease-in;
 
                         .text-container {
                             padding: 1.5em;
@@ -262,7 +285,7 @@ export default {
 
                     a {
                         .arrow-up {
-                            width: 7%;
+                            width: 6%;
                             padding: 0.4em;
                             background-color: #c0e1cf;
                             position: absolute;
@@ -271,7 +294,7 @@ export default {
                         }
 
                         .arrow-up-2 {
-                            width: 7%;
+                            width: 6%;
                             padding: 0.4em;
                             background-color: #c0e1cf;
                             position: absolute;
@@ -298,13 +321,15 @@ export default {
                         top: 23%;
                     }
 
-                    
-
+                    .circle-white:hover,
+                    .cart-red:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 .image-container:hover .hover-content {
-                    display: block;
-
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
         }
@@ -314,10 +339,9 @@ export default {
             height: 400px;
             position: relative;
 
-            a {
-                        
+            a {    
                 .arrow-up-3 {
-                    width: 2.5%;
+                    width: 2%;
                     padding: 0.4em;
                     background-color: #c0e1cf;
                     position: absolute;
@@ -512,6 +536,7 @@ export default {
                 .image-container {
                     width: calc(100% / 3);
                     margin: 10px;
+                    position: relative;
                     img {
                         width: 100%;
                     }
@@ -525,12 +550,49 @@ export default {
                     h5 {
                         font-style: oblique;
                     }
+
+                    .date-container {
+                        width: 15%;
+                        position: absolute;
+                        top: -5%;
+                        left: 2%;
+                        
+                        .day {
+                            background-color: #c0e1cf;
+                            padding: 0.2em;
+                            font-weight: bold;
+                            font-style: oblique;
+                            text-align: center;
+                            font-size: 1.3em;
+                        }
+
+                        .month {
+                            background-color: #e1c0b0;
+                            padding: 0.5em;
+                            padding-bottom: 1.2em;
+                            font-size: 0.5em;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        .triangle {
+                            width: 100%;
+                            height: 8px;
+                            background-image:
+                                linear-gradient(to bottom right, #e1c0b0 50%, transparent 0),
+                                linear-gradient(to bottom left, #e1c0b0 50%, transparent 0);
+                            background-size: 50% 100%;
+                            background-repeat: no-repeat;
+                            background-position: left, right;
+                        }
+                    }
                 }
 
                 a {
                         
                     .arrow-up-4 {
-                        width: 2.5%;
+                        width: 2%;
                         padding: 0.4em;
                         background-color: #c0e1cf;
                         position: absolute;

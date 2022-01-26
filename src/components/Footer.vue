@@ -24,10 +24,10 @@
                     <div class="inside-footer-box">
                         <h5>Stay in touch with us</h5>
                         <div class="socials">
-                            <a href=""><font-awesome-icon :icon="['fab', 'twitter']" /></a>
-                            <a href=""><font-awesome-icon :icon="['fab', 'pinterest-p']" /></a>
-                            <a href=""><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
-                            <a href=""><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a>
+                            <a href="https://twitter.com/home"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+                            <a href="https://www.pinterest.it/"><font-awesome-icon :icon="['fab', 'pinterest-p']" /></a>
+                            <a href="https://www.facebook.com/"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
+                            <a href="https://it.linkedin.com/"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a>
 
                         </div>
                     </div>

@@ -1,15 +1,17 @@
 <template>
   <div>
-     <div class="header-container">
+     <div class="header-container" id="home">
       <div class="header-top">
         <img src="../assets/img/logo-sidearea-1.png" alt="">
         <ul>
-          <li><a class="active" href="#">home</a></li>
-          <li><a href="#">pages</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">blog</a></li>
+          <li v-for="(item, index) in navLi"
+              :key="index" 
+          ><a :class="item.class" :href="item.link">{{ item.name }}</a></li>
+          <!-- <li><a href="#">pages</a></li>
+          <li><a href="#main-container">portfolio</a></li>
+          <li><a href="#blog">blog</a></li>
           <li><a href="#">shop</a></li>
-          <li><a href="#">elements</a></li>
+          <li><a href="#">elements</a></li> -->
           <li><a href="#"><img class="menu-icon" src="../assets/svg/svg-1.svg" alt=""></a></li>
         </ul>
       </div>
@@ -96,8 +98,44 @@ export default {
     },
     data () {
       return {
-        // counter: null,
-        // sliderImages: []
+        navLi: [
+          {
+            name:"Home",
+            link:"#home",
+            class:"active"
+          },
+
+          {
+            name:"Pages",
+            link:"#",
+          },
+
+           {
+            name:"Portfolio",
+            link:"#",
+          },
+
+           {
+            name:"Blog",
+            link:"#",
+          },
+
+           {
+            name:"Shop",
+            link:"#",
+          },
+
+           {
+            name:"Elements",
+            link:"#",
+          },
+
+           {
+            name:"",
+            link:"#",
+            class:"menu-icon"
+          },
+        ]
       }
     },
 
@@ -155,7 +193,7 @@ export default {
             text-transform: uppercase;
             font-size: 0.6em;
             font-weight: bold;
-            margin-right: 2em;
+            margin-right: 3em;
           }
 
           a:hover,
