@@ -194,7 +194,7 @@ export default {
             text-transform: uppercase;
             font-size: 0.6em;
             font-weight: bold;
-            margin-right: 3em;
+            margin-right: 4em;
           }
 
           a:hover,
